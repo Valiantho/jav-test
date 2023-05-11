@@ -33,10 +33,13 @@ function gamePlay(playerSelection, computerSelection) {
         }}
 
         let computerChoice = getComputerChoice();
+        let playerChoice = prompt('Write rock, paper or scissors', 'input here');
 
-gamePlay('rock', computerChoice)
+gamePlay(playerChoice, computerChoice)
 
 /*Important note: you want to return the results of this function call, not console.log() them. 
 You’re going to use what you return later on, so let’s test this function by using console.log 
 to see the results:*/
+
+
 
