@@ -30,6 +30,8 @@ function gamePlay(playerSelection, computerSelection) {
             console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
         } else{
             console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
-        }
-}
-gamePlay('rock', 'scissors')
+        }}
+
+        let computerChoice = getComputerChoice();
+
+gamePlay('rock', computerChoice)
