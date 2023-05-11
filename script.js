@@ -9,7 +9,7 @@ function getComputerChoice() {
     let cal = Math.floor(Math.random() * Chioce.length);
     let computerChoice = Chioce[cal];
     
-    console.log(computerChoice);
+    return computerChoice;
 }
 
 /* Write a function that plays a single round of Rock Paper Scissors. 
@@ -35,3 +35,8 @@ function gamePlay(playerSelection, computerSelection) {
         let computerChoice = getComputerChoice();
 
 gamePlay('rock', computerChoice)
+
+/*Important note: you want to return the results of this function call, not console.log() them. 
+You’re going to use what you return later on, so let’s test this function by using console.log 
+to see the results:*/
+
