@@ -28,6 +28,8 @@ function gamePlay(playerSelection, computerSelection) {
         (playerSelection === 'paper' && computerSelection === 'rock') ||
         (playerSelection === 'scissors' && computerSelection === 'paper')){
             console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
-        } 
+        } else{
+            console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+        }
 }
 gamePlay('rock', 'scissors')
