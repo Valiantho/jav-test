@@ -43,26 +43,38 @@ function gamePlay(playerSelection, computerSelection) {
         Loops are covered in the next lesson.*/
 
         function game(){
-        for (i=0; i < 5; i++){
-           
-            let computerChoice = getComputerChoice();
-            let playerChoice = prompt('Write rock, paper or scissors', 'input here');
-            let result = gamePlay(playerChoice, computerChoice);
+          
             let computerScore = 0;
             let playerScore = 0;
 
+
+        for (i=0; i < 5; i++){
+            let computerChoice = getComputerChoice();
+            let playerChoice = prompt('Write rock, paper or scissors', 'input here');
+            let result = gamePlay(playerChoice, computerChoice);
+          
             if (result === `You Win! ${playerChoice} beats ${computerChoice}`){
                 playerScore++;
                 console.log(`Round ${i+1}: Player Wins!`);
             }
             else if (result === `You Lose! ${computerChoice} beats ${playerChoice}`){
-
+                computerScore++;
                 console.log(`Round ${i+1}: Computer Wins!`)
             } 
             else if (result === 'its a tie'){
-                console.log(`Round ${i+1}: 'its a tie`)
+                console.log(`Round ${i+1}: ts a tie`)
             }
     
+            }
+
+            if (playerScore === computerScore){
+                console.log(`Game over final score computer: ${computerScore} you: ${playerScore} its a tie`)
+            }
+            else if (playerScore > computerScore){
+                console.log(`Game over final score computer: ${computerScore} you: ${playerScore} You win!`)
+            }
+            else if (playerScore < computerScore){
+                console.log(`Game over final score computer: ${computerScore} you: ${playerScore} You lose`)
             }
     
             }
